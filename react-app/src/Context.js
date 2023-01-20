@@ -15,11 +15,15 @@ const AppProvider = ({ children }) => {
     profileIMG: "",
   })
 
+  const [memory, setMemory] = useState([])
+
   return (
     <AppContext.Provider
       value={{
         user,
         setUser,
+        memory,
+        setMemory
       }}
     >
       {children}
